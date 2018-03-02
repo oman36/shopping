@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2f9c62c3-5b78-459f-8a56-b284b2ca47db" name="Default" comment="" />
+    <list default="true" id="2f9c62c3-5b78-459f-8a56-b284b2ca47db" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change beforePath="$PROJECT_DIR$/script.js" afterPath="$PROJECT_DIR$/script.js" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,12 +45,12 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="31" column="27" lean-forward="false" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
+            <state relative-caret-position="880">
+              <caret line="43" column="23" lean-forward="false" selection-start-line="43" selection-start-column="23" selection-end-line="43" selection-end-column="23" />
               <folding>
-                <marker date="1520008352871" expanded="true" signature="124:143" ph="SELECT * FRO... shops" />
-                <marker date="1520008352871" expanded="true" signature="172:191" ph="SELECT * FRO... items" />
-                <marker date="1520008352871" expanded="true" signature="220:239" ph="SELECT * FRO... types" />
+                <marker date="1520009344252" expanded="true" signature="124:143" ph="SELECT * FRO... shops" />
+                <marker date="1520009344252" expanded="true" signature="172:191" ph="SELECT * FRO... items" />
+                <marker date="1520009344252" expanded="true" signature="220:239" ph="SELECT * FRO... types" />
               </folding>
             </state>
           </provider>
@@ -56,8 +59,8 @@
       <file leaf-file-name="script.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="5" column="4" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+            <state relative-caret-position="280">
+              <caret line="14" column="32" lean-forward="false" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -200,8 +203,8 @@
         <option value="$PROJECT_DIR$/add.post.php" />
         <option value="$PROJECT_DIR$/db.php" />
         <option value="$PROJECT_DIR$/functions.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/script.js" />
+        <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
   </component>
@@ -312,12 +315,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1519999953982</updated>
-      <workItem from="1519999955129" duration="8371000" />
+      <workItem from="1519999955129" duration="9338000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8371000" />
+    <option name="totallyTimeSpent" value="9338000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="0" width="1920" height="1032" extended-state="6" />
@@ -503,20 +506,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="31" column="27" lean-forward="false" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
+        <state relative-caret-position="880">
+          <caret line="43" column="23" lean-forward="false" selection-start-line="43" selection-start-column="23" selection-end-line="43" selection-end-column="23" />
           <folding>
-            <marker date="1520008352871" expanded="true" signature="124:143" ph="SELECT * FRO... shops" />
-            <marker date="1520008352871" expanded="true" signature="172:191" ph="SELECT * FRO... items" />
-            <marker date="1520008352871" expanded="true" signature="220:239" ph="SELECT * FRO... types" />
+            <marker date="1520009344252" expanded="true" signature="124:143" ph="SELECT * FRO... shops" />
+            <marker date="1520009344252" expanded="true" signature="172:191" ph="SELECT * FRO... items" />
+            <marker date="1520009344252" expanded="true" signature="220:239" ph="SELECT * FRO... types" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="4" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+        <state relative-caret-position="280">
+          <caret line="14" column="32" lean-forward="false" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
           <folding />
         </state>
       </provider>

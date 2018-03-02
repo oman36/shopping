@@ -37,6 +37,13 @@ $types = $db->selectAll('SELECT * FROM types');
                 <td></td>
             </tr>
         <?php } ?>
+        <tr>
+            <th>Итого:</th>
+            <th>Стоимость:</th>
+            <th></th>
+            <th>Кешбек:</th>
+            <th></th>
+        </tr>
 
     </table>
 

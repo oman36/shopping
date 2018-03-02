@@ -1,20 +1,32 @@
-var elems = {
+var set = {};
 
-};
+$.each(types, function (n, el) {
+    set[el.id] = {
+        '$row' : $('.type[data-id=\"' + el.id + '\"]')
+    };
+});
 
 function add(el) {
-    types
+    var item = set[el.type_id];
+    var $cells = item.$row.find('td');
+    $cells.eq(1).html(findId(el.shop_id, shops).name);
+    $cells.eq(2).html(el.price);
+    $cells.eq(3).html(el.cashback);
+    $cells.eq(3).html(el.comment);
+}
+
+function findId(id, array) {
+    for (var i = 0; i < array.length; i++) {
+        if (array[i].id == id) {
+            return array[i];
+        }
+    }
 }
 
 $('#items tr').each(function (el) {
     var id = parseInt($(this).attr('data-id'));
     $(this).find('button').on('click', function (event) {
         event.preventDefault();
-        $.each(items, function (n, el) {
-           if (el.id != id) {
-               return this;
-           }
-           add(el);
-        });
+        add(findId(id, items));
     });
 });
