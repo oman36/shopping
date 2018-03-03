@@ -6,13 +6,48 @@ $.each(types, function (n, el) {
     };
 });
 
+function updateResult()
+{
+    var sum = 0;
+    var cashbacks = {};
+    $.each(set, function (type_id, type) {
+        if (type.item) {
+            sum += parseFloat(type.item.price);
+            if (cashbacks.hasOwnProperty(type.item.shop_id)) {
+                var cashbackVal = parseFloat(type.item.cashback);
+                if (cashbackVal > 0) {
+                    cashbacks[type.item.shop_id] += parseFloat(type.item.cashback);
+                }
+            } else {
+                cashbacks[type.item.shop_id] = parseFloat(type.item.cashback);
+            }
+        }
+    });
+
+    $('#sum').html(sum);
+    var cashback = '';
+
+
+    $.each(cashbacks, function (shop_id, value) {
+        cashback += '<li>' +
+            findId(shop_id, shops).name +
+            ' : ' +
+            value +
+            '</li>';
+
+    });
+    $('#cashback').html(cashback);
+}
+
 function add(el) {
-    var item = set[el.type_id];
-    var $cells = item.$row.find('td');
+    var type = set[el.type_id];
+    var $cells = type.$row.find('td');
     $cells.eq(1).html(findId(el.shop_id, shops).name);
     $cells.eq(2).html(el.price);
     $cells.eq(3).html(el.cashback);
     $cells.eq(3).html(el.comment);
+    type.item = el;
+    updateResult();
 }
 
 function findId(id, array) {

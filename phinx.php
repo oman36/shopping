@@ -18,7 +18,8 @@ return call_user_func(function () {
                 'name' => $db['basename'],
                 'user' => $db['username'],
                 'pass' => $db['password'],
-                'port' => '3306'
+                'port' => '3306',
+                'charset' => 'utf8'
             ],
         ]
     ];

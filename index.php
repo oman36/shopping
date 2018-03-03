@@ -37,18 +37,20 @@ $types = $db->selectAll('SELECT * FROM types');
                 <td></td>
             </tr>
         <?php } ?>
-        <tr>
-            <th>Итого:</th>
-            <th>Стоимость:</th>
-            <th></th>
-            <th>Кешбек:</th>
-            <th></th>
-        </tr>
-
     </table>
 
+    <h4>Итого:</h4>
+
+    <label>Денег:</label>
+        <span id="sum"></span>
     <br>
-    <a class="btn btn-success">Добавить Товар</a>
+    <label>Кешбек:</label>
+        <ul id="cashback">
+
+        </ul>
+
+    <br>
+    <a href="/add.get.php" class="btn btn-success">Добавить Товар</a>
     <a class="btn btn-success">Добавить Тип</a>
     <a class="btn btn-success">Добавить Магазин</a>
     <br>
@@ -62,7 +64,8 @@ $types = $db->selectAll('SELECT * FROM types');
             <th>Цена</th>
             <th>Кешбек</th>
             <th>Комментарий</th>
-            <th>Добавить</th>
+            <th>В корзину</th>
+            <th>Редактировать</th>
         </tr>
         <?php foreach ($items as $item) { ?>
             <tr class="item" data-id="<?= $item['id'] ?>">
@@ -73,6 +76,7 @@ $types = $db->selectAll('SELECT * FROM types');
                 <td><?= $item['cashback'] ?></td>
                 <td><?= $item['comment'] ?></td>
                 <td><button class="action_btn">Добавить</button></td>
+                <td><a href="/add.get.php?id=<?= $item['id'] ?>" class="btn btn-primary">Редактировать</a>  </td>
             </tr>
         <?php } ?>
     </table>

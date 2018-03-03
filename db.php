@@ -32,16 +32,18 @@ class DB extends \PDO
     {
         $sql = "UPDATE `{$table}` SET ";
 
+        $setters = [];
         foreach ($data as $field => $value) {
-            $sql .= " `{$field}` = '{$value}'";
+            $setters[] = "`{$field}` = '{$value}'";
         }
 
-        $sql .= ' WHERE 1 ';
+        $sql .= implode(",\n", $setters);
+
+        $sql .= "\nWHERE 1 ";
 
         foreach ($where as $field => $value) {
-            $sql .= " AND `{$field}` = '{$value}'";
+            $sql .= "\nAND `{$field}` = '{$value}'";
         }
-
 
         $res = $this->exec($sql);
 
@@ -66,5 +68,16 @@ class DB extends \PDO
     public function selectOne(string $query): array
     {
         return $this->query($query)->fetch(self::FETCH_ASSOC);
+    }
+
+    public function insertOrUpdate(string $table, array $data)
+    {
+        $id = $data['id'] ?? 0;
+        if ($id) {
+            return $this->update($table, $data, compact('id'));
+        } else {
+            unset($data['id']);
+            return $this->insert($table, $data);
+        }
     }
 }

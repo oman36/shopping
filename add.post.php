@@ -3,6 +3,7 @@ require_once __DIR__ .'/db.php';
 require_once __DIR__ .'/functions.php';
 
 $data = getFields([
+    'id',
     'name',
     'url',
     'type_id',
@@ -13,9 +14,9 @@ $data = getFields([
 ], $_POST);
 
 $db = init_db();
-
-if ($db->insert('items', $data)) {
-    echo "Ok";
-} else {
-    echo "Ошибка";
-}
+$db->insertOrUpdate('items', $data);
+?>
+<a href="/index.php">На главную</a>
+<br>
+<a href="/add.get.php">Добавить ещё</a>
+<br>
